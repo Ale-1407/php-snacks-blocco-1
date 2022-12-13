@@ -44,6 +44,12 @@ $partite = [
     <title>Document</title>
 </head>
 <body>
+    
+
+    <?php for( $i = 0; $i < count($partite); $i++ ){ ?>
+       <?php echo $partite[$i]["squadraCasa"] . '-' . $partite[$i]["squadraOspite"] . '|' . $partite[$i]["puntiFattiCasa"] . '-' . $partite[$i]["puntiFattiOspite"]; ?>
+       <br>
+   <?php } ?>
 
     
 
