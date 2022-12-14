@@ -2,31 +2,21 @@
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
  -->
 
- 
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
+<?php
+   $array = [];
 
-    <?php
-    $array = [];
-
-    for($i = 0; $i < 15; $i++){
+   for($i = 0; count( $array ) < 15; $i++){
       $number = rand(1, 100);
        
-      if( in_array($number, $array)) {
+      if( !in_array($number, $array)) {
           $array[] = $number;
       }
-      return $array;
     }
 
-    ?>
+   for( $k = 0; $k < count($array); $k++){
+      echo $array[$k];
+      echo "<br>";
+   }
 
- </body>
- </html>
+?>
